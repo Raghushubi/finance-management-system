@@ -664,6 +664,7 @@ def logout():
     session.clear()
     return redirect(url_for('login'))
 
+
 # Template filters
 @app.template_filter('currency')
 def currency_filter(value):
