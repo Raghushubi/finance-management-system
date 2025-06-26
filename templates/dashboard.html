@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <span class="username">{{ username }}</span>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+    
+    <div class="dashboard">
+        <h1>Financial Dashboard</h1>
+        
+        <div class="summary">
+            <div class="card">
+                <h3>Total Income</h3>
+                <p>{{ income|currency }}</p>
+            </div>
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <p>{{ expenses|currency }}</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Recent Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions[:5] %}
+                    <tr>
+                        <td>{{ transaction[2] }}</td>
+                        <td>{{ transaction[3] }}</td>
+                        <td>{{ transaction[1]|currency }}</td>
+                        <td>{{ transaction[4]|date }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions">
+            <button onclick="window.location.href='/transactions'">Manage Transactions</button>
+            <button onclick="window.location.href='/assets'">Manage Assets</button>
+            <button onclick="window.location.href='/budget'">Manage Budgets</button>
+            <button onclick="window.location.href='/reports'">View Reports</button>
+        </div>
+    </div>
+
+    <script src="../static/js/dashboard.js"></script>
+</body>
+</html>

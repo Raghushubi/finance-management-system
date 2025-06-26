@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+    <div class="auth-container">
+        <form id="authForm" method="POST">
+            <h2 id="formTitle">Login</h2>
+            
+            <div class="form-group" id="usernameGroup" style="display:none">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div id="phoneNumbers" style="display:none">
+                <div class="form-group phone-group">
+                    <label>Phone Number</label>
+                    <input type="tel" class="phone" pattern="[0-9]{10}" maxlength="10">
+                    <button type="button" class="remove-phone" style="display:none">Remove</button>
+                </div>
+                <button type="button" id="addPhone">Add Phone</button>
+            </div>
+
+            <button type="submit">Login</button>
+
+            <p id="toggleText">Don't have an account?</p>
+            <a href="#" id="toggleForm">Register</a>
+        </form>
+    </div>
+    <script src="../static/js/login.js"></script>
+</body>
+</html>

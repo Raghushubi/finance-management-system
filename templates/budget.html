@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Management</title>
+    <link rel="stylesheet" href="../static/css/budget.css">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <span class="username">{{ username }}</span>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+    <div class="container">
+        <h2>Budget Management</h2>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button onclick="window.location.href='/dashboard'">Back to Dashboard</button>
+        </div>
+        
+        <h3>Planned vs Actual Spending</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Planned Amount</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if budgets %}
+                    {% for budget in budgets %}
+                        <tr>
+                            <td>{{ budget[1] }}</td>  
+                            <td>{{ budget[2] }}</td> 
+                            <td>{{ budget[3] }}</td>  
+                            <td>{{ budget[4] }}</td>  
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4" style="text-align: center;">No budgets available</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        
+    </div>
+    <script src="../static/js/budget.js"></script>
+</body>
+</html>

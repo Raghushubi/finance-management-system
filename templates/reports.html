@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="../static/css/reports.css">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <span class="username">{{ username }}</span>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+    <div class="container">
+        <h2>Reports</h2>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button onclick="window.location.href='/dashboard'">Back to Dashboard</button>
+        </div>
+        <h3>Summary Reports</h3>
+        <table id="reportTable">
+            <thead>
+                <tr>
+                    <th>Report Name</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Weekly Income</td>
+                    <td>{{ income }}</td>
+                </tr>
+                <tr>
+                    <td>Weekly Expenses</td>
+                    <td>{{ expenses }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../static/js/reports.js"></script>
+</body>
+</html>

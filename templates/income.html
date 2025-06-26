@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Management</title>
+    <link rel="stylesheet" href="income.css">
+    <script src="income.js" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="profile.html">Profile</a>
+        <a href="login.html" onclick="logout()">Logout</a>
+    </nav>
+    <div class="container">
+        <h2>Income Management</h2>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button onclick="redirectTo('dashboard.html')">Back to Dashboard</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="incomeTable"></tbody>
+        </table>
+    </div>
+</body>
+</html>
