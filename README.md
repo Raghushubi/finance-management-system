@@ -6,11 +6,11 @@ A comprehensive web-based personal finance management application built with **F
 
 ## 🧑‍🤝‍🧑 Team Members
 
-- [Raghu Shubhangi] 
-- [Gutta Greeshmitha Sai]  
-- [Nandana Renjith] 
-- [Meenakshi ]
-- [Akshaya R]
+- Raghu Shubhangi
+- Gutta Greeshmitha Sai
+- Nandana Renjith
+- Meenakshi 
+- Akshaya R
 
 ---
 
@@ -56,7 +56,7 @@ The system uses a well-structured PostgreSQL database with the following tables:
 
 ## ✅ Prerequisites
 
-- Python 3.x  
+- Python
 - PostgreSQL  
 - pgAdmin 4 *(recommended for database management)*
 
