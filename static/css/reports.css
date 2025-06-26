@@ -1,0 +1,146 @@
+
+span {
+    color: white;
+}
+
+nav {
+    background-color: #007bff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+}
+
+h2 {
+    text-align: center;
+    color: #1a237e;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+h3 {
+    color: #0d47a1;
+    font-size: 1.6em;
+    margin: 25px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e3f2fd;
+}
+
+#reportTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+    background-color: #1565c0;
+    color: white;
+}
+
+th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.05em;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #e3f2fd;
+    transition: background-color 0.2s ease;
+}
+
+button {
+    background-color: #1565c0;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0d47a1;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Money formatting */
+td:nth-child(2) {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    color: #2e7d32;  
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    th, td {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
